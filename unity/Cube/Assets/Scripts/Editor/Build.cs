@@ -67,7 +67,7 @@ public class Build : MonoBehaviour
         if (Directory.Exists(exportPath))
             Directory.Delete(exportPath, true);
 
-        EditorUserBuildSettings.iOSBuildConfigType = iOSBuildType.Release;
+        EditorUserBuildSettings.iOSXcodeBuildConfig = XcodeBuildConfig.Release;
 
         var options = BuildOptions.AcceptExternalModificationsToPlayer;
         var report = BuildPipeline.BuildPlayer(
